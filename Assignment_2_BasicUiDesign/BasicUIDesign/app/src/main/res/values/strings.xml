@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BasicUIDesign</string>
+    <string name="displayCount">Your Count is :</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="category">
+        <item>General</item>
+        <item>OBC</item>
+        <item>SC</item>
+        <item>ST</item>
+    </string-array>
+</resources>
