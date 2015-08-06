@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BasicUIDesign</string>
+    <string name="displayCount">Your Count is :</string>
+    <string name="action_settings">Settings</string>
+    <string name="name">Name</string>
+    <string name="lastName">LastName</string>
+    <string name="email">Email</string>
+    <string name="mobileNumber">Number</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="submit">Submit</string>
+
+    <string-array name="category">
+        <item>General</item>
+        <item>OBC</item>
+        <item>SC</item>
+        <item>ST</item>
+    </string-array>
+</resources>
