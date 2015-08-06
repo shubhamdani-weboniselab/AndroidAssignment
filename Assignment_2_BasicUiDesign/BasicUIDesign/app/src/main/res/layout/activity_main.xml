@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="@string/Name"
                 android:textSize="25sp"
                 android:textStyle="italic"/>
 
@@ -49,7 +49,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="LastName"
+                android:text="@string/LastName"
                 android:textSize="25sp"
                 android:textStyle="italic"/>
 
@@ -67,7 +67,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email"
+                android:text="@string/Email"
                 android:textSize="25sp"
                 android:textStyle="italic"/>
 
@@ -85,8 +85,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mobile Number"
-
+                android:text="@string/MobileNumber"
                 android:textSize="25sp"
                 android:textStyle="italic"/>
 
@@ -109,13 +108,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="Male"/>
+                android:text="@string/Male"/>
 
             <RadioButton
                 android:id="@+id/rbFemale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Female"/>
+                android:text="@string/Female"/>
 
         </RadioGroup>
 
@@ -123,7 +122,7 @@
             android:id="@+id/cbSubscription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subscribe"/>
+            android:text="@string/Subscribe"/>
 
         <Spinner
             android:id="@+id/spinner"
@@ -136,7 +135,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#33cccc"
-            android:text="Submit"
+            android:text="@string/Submit"
             android:layout_margin="10dp"
             android:textSize="25dp"
             android:textStyle="bold|italic"
