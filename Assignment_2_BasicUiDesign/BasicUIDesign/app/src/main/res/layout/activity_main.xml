@@ -8,20 +8,16 @@
         android:background="@drawable/background"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
+
 
             <ImageView
                 android:id="@+id/topImage"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/ic_launcher"
                 />
-        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,7 +27,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Name"
+                android:text="@string/name"
                 android:textSize="25sp"
                 android:textStyle="italic"/>
 
@@ -49,7 +45,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/LastName"
+                android:text="@string/lastName"
                 android:textSize="25sp"
                 android:textStyle="italic"/>
 
@@ -67,7 +63,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Email"
+                android:text="@string/email"
                 android:textSize="25sp"
                 android:textStyle="italic"/>
 
@@ -85,7 +81,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/MobileNumber"
+                android:text="@string/mobileNumber"
                 android:textSize="25sp"
                 android:textStyle="italic"/>
 
@@ -108,13 +104,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="@string/Male"/>
+                android:text="@string/male"/>
 
             <RadioButton
                 android:id="@+id/rbFemale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Female"/>
+                android:text="@string/female"/>
 
         </RadioGroup>
 
@@ -122,20 +118,20 @@
             android:id="@+id/cbSubscription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Subscribe"/>
+            android:text="@string/subscribe"/>
 
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            >Category</Spinner>
+            ></Spinner>
 
         <Button
             android:id="@+id/btnSubmit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#33cccc"
-            android:text="@string/Submit"
+            android:background="@color/accent_material_light"
+            android:text="@string/submit"
             android:layout_margin="10dp"
             android:textSize="25dp"
             android:textStyle="bold|italic"
