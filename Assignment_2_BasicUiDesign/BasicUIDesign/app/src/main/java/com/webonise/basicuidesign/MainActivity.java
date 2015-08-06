@@ -37,7 +37,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initialize();
+        initializeView();
 
 
         dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -98,7 +98,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     }
 
 
-    public void initialize() {
+    public void initializeView() {
         etName = (EditText) findViewById(R.id.etName);
         etLastName = (EditText) findViewById(R.id.etLastName);
         etMobileNumber = (EditText) findViewById(R.id.etNumber);
