@@ -1,0 +1,5 @@
+/home/webonise/AndroidStudioProjects/BasicuiDesign/app/build/intermediates/classes/debug
+/home/webonise/AndroidStudioProjects/BasicuiDesign/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-c1519da6bd1cf74b1f8886aaf67522a85f52b26b.jar
+/home/webonise/AndroidStudioProjects/BasicuiDesign/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-77dc90e8c56a71bbd92295a891f57e8a6d5b33ad.jar
+/home/webonise/AndroidStudioProjects/BasicuiDesign/app/build/intermediates/pre-dexed/debug/classes-0e2214c37e6ee71eb5cb58d50c902d2d07f03be5.jar
+/home/webonise/AndroidStudioProjects/BasicuiDesign/app/build/intermediates/pre-dexed/debug/classes-d33f8d16386e66152000957c707289af1dd1fb82.jar

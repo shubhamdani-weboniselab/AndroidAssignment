@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true"  >
+
+            <color android:color="@color/abc_background_cache_hint_selector_material_light"> </color>
+    </item>
+</selector><!-- From: file:/home/webonise/AndroidStudioProjects/BasicuiDesign/app/src/main/res/drawable/edit_text_background.xml -->

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+
+        <shape android:shape="rectangle">
+            <gradient android:startColor= "@color/black" android:endColor="@color/red"
+                android:angle="45">
+            </gradient>
+            <corners android:radius="100dp"></corners>
+            <stroke android:width="12px" android:color="@color/white" />
+        </shape>
+
+    </item>
+    <item >
+
+        <shape android:shape="rectangle">
+            <gradient android:startColor="@color/black" android:endColor="@color/red"
+                android:angle="180">
+            </gradient>
+            <corners android:radius="100dp"></corners>
+            <stroke android:width="12px" android:color="#E6E6E6" />
+        </shape>
+
+    </item>
+</selector><!-- From: file:/home/webonise/AndroidStudioProjects/BasicuiDesign/app/src/main/res/drawable/btn_submit_background.xml -->
