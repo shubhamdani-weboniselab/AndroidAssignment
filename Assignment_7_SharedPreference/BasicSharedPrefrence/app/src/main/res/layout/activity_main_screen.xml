@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainScreenActivity">
+
+    <TextView
+        android:background="@drawable/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create"
+        android:id="@+id/tvCreate"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="70dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext"
+        android:id="@+id/etInputField"
+        android:layout_alignBottom="@+id/tvCreate"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/tvCreate"
+        android:layout_toEndOf="@+id/tvCreate" />
+
+    <Button
+        android:background="@drawable/button_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit this file"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/btnEdit"
+        android:layout_above="@+id/btnAppend"
+        android:layout_alignRight="@+id/btnAppend"
+        android:layout_alignEnd="@+id/btnAppend"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:background="@drawable/button_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete this file"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/btnDelete"
+        android:layout_above="@+id/btnShowData"
+        android:layout_alignRight="@+id/btnShowData"
+        android:layout_alignEnd="@+id/btnShowData"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:background="@drawable/button_background"
+        android:layout_height="wrap_content"
+        android:text="append this file"
+        android:id="@+id/btnAppend"
+        android:layout_above="@+id/btnDelete"
+        android:layout_alignRight="@+id/btnDelete"
+        android:layout_marginBottom="5dp"
+        android:layout_alignEnd="@+id/btnDelete"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:background="@drawable/button_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Data from file"
+        android:id="@+id/btnShowData"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/etInputField"
+        android:layout_alignEnd="@+id/etInputField" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create file"
+        android:id="@+id/btnCreate"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/btnEdit"
+        android:background="@drawable/button_background"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvEditPanel"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/edittext"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/btnCreate"
+        android:layout_alignRight="@+id/etInputField"
+        android:layout_alignEnd="@+id/etInputField"
+        android:layout_below="@+id/tvCreate" />
+
+</RelativeLayout>

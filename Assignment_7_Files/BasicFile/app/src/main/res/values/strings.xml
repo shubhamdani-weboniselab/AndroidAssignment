@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Basic File example</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_weigth">Enter Weight</string>
+    <string name="enter_height">Enter Height</string>
+    <string name="submit">Submit</string>
+    <string name="empty_shared">Shared preference is Empty</string>
+    <string name="field_empty">The fields is/are empty</string>
+
+
+</resources>
