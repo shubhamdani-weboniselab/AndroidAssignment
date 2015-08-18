@@ -15,13 +15,11 @@ gen/
 # Gradle files
 */build/
 /local.properties
-/.idea
 /.navigation
 .idea/modules.xml
 app/app.iml
 app.iml
 .DS_Store
-/build
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -43,14 +41,14 @@ Thumbs.db
 .project
 
 # Android Studio
-*.iml
+
 .idea
 #.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
 .gradle
 build/
 
 # Intellij project files
-*.iml
+
 *.ipr
 *.iws
 */.idea/
