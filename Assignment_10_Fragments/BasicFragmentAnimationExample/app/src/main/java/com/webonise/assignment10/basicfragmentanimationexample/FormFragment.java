@@ -61,7 +61,6 @@ public class FormFragment extends android.app.Fragment implements View.OnClickLi
 
             FragmentManager manager = getFragmentManager();
             FragmentTransaction transaction = manager.beginTransaction();
-            transaction.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
             FormFragment formFragment = new FormFragment();
             transaction.remove(formFragment);
             transaction.commit();

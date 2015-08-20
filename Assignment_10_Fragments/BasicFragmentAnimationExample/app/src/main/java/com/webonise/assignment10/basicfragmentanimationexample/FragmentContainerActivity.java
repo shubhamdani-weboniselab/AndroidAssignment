@@ -14,7 +14,8 @@ public class FragmentContainerActivity extends Activity implements Communicator 
         setContentView(R.layout.activity_fragment_container);
         FragmentManager manager = getFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.setCustomAnimations(R.anim.slide_out_right, R.anim.slide_in_left);
+        transaction.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
+
         DetailListFragment detailListFragment = new DetailListFragment();
         transaction.add(R.id.detailListFragment, detailListFragment);
         transaction.commit();
@@ -24,7 +25,9 @@ public class FragmentContainerActivity extends Activity implements Communicator 
     public void onBackPressed() {
 
         if (getFragmentManager().getBackStackEntryCount() > Constants.ZERO) {
+
             getFragmentManager().popBackStack();
+
         } else {
             super.onBackPressed();
         }

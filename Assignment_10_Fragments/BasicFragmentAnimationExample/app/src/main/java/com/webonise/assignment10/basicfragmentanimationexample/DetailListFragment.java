@@ -35,7 +35,7 @@ public class DetailListFragment extends android.app.Fragment implements View.OnC
     public void onClick(View view) {
         FragmentManager manager = getFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.setCustomAnimations( R.anim.slide_out_right,R.anim.slide_in_left);
+        transaction.setCustomAnimations( R.anim.slide_in_right,R.anim.slide_out_left);
         FormFragment formFragment = new FormFragment();
         transaction.replace(R.id.detailListFragment, formFragment);
         transaction.addToBackStack(null);
