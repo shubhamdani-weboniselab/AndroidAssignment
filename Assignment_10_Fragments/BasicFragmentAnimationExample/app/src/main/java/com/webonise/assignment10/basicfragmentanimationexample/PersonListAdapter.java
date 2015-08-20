@@ -54,9 +54,9 @@ public class PersonListAdapter extends BaseAdapter {
         }
         initializeView(view);
         tvName.setText(personDetailsList.get(position).getName());
-        tvAge.setText("" + personDetailsList.get(position).getAge());
-        tvWeight.setText(personDetailsList.get(position).getWeight().toString());
-        tvHeight.setText(personDetailsList.get(position).getHeight().toString());
+        tvAge.append("" + personDetailsList.get(position).getAge());
+        tvWeight.append(personDetailsList.get(position).getWeight().toString());
+        tvHeight.append(personDetailsList.get(position).getHeight().toString());
 
         imgButton.setOnClickListener(new View.OnClickListener() {
             @Override
