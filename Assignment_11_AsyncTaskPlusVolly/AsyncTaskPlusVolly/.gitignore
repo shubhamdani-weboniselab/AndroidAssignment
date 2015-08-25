@@ -50,7 +50,7 @@ Thumbs.db
 build/
 
 # Intellij project files
-
+.idea/
 *.ipr
 *.iws
 */.idea/
