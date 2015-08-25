@@ -15,7 +15,7 @@ gen/
 # Gradle files
 */build/
 /local.properties
- 
+
 /.navigation
 
 
