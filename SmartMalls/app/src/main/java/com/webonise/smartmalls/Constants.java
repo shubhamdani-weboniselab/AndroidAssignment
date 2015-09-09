@@ -22,25 +22,25 @@ public class Constants {
             "\t\"url\": \"http://www.mobilesmspk.net/user/images/wallpaper_images/www.mobilesmspk.net_nature_33.jpg\",\n" +
             "\t\"discountPercentage\": \"10% discount\",\n" +
             "\t\"description\": \"this discount is only available for some time\",\n" +
-            "\t\"latitude\":\"18.510764\",\n" +
+            "\t\"latitude\":\"18.5111\",\n" +
 
-            "\t\"longitude\":\"73.777281\"\n" +
+            "\t\"longitude\":\"73.7784\"\n" +
             "\t\n" +
             "\n" +
             "},{\t\"name\":\"android\",\n" +
             "\t\"url\": \"http://pati.wen.su/wallpaper/240x320/240x320_nicevilla.jpg\",\n" +
             "\t\"discountPercentage\": \"100% discount\",\n" +
             "\t\"description\": \"this discount is only available for some time\",\n" +
-            "\t\"latitude\":\"19.562622\",\n" +
-            "\t\"longitude\":\"72.808723\"\n" +
+            "\t\"latitude\":\"18.511104\",\n" +
+            "\t\"longitude\":\"73.777156\"\n" +
             "\n" +
             "},{\n" +
             "\t\"name\": \"kitkat\",\n" +
             "\t\"url\": \"http://mobile-phone.pk/images/wallpapers/animated_nature_wallpaper_nature_mobile_wallpaper.jpg\",\n" +
             "\t\"discountPercentage\": \"10% discount\",\n" +
             "\t\"description\": \"this discount is only available for some time\",\n" +
-            "\t\"latitude\":\"19.562622\",\n" +
-            "\t\"longitude\":\"72.808723\"\n" +
+            "\t\"latitude\":\"18.510477\",\n" +
+            "\t\"longitude\":\"73.777170\"\n" +
             "\n" +
             "\t\n" +
             "\n" +

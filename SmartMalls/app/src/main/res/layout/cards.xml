@@ -17,7 +17,7 @@
         <RelativeLayout
 
             android:layout_width="match_parent"
-            android:background="@color/material_blue_grey_800"
+            android:background="#fffff2a9"
             android:layout_height="match_parent">
 
             <ImageView
@@ -33,10 +33,11 @@
                 android:id="@+id/tvDiscount"
                 android:textSize="20dp"
                 android:layout_alignParentTop="true"
+                android:shadowRadius="10.1"
                 android:layout_width="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_height="wrap_content"
-                android:background="#aa00ff"
+                android:background="#83fff466"
                 android:padding="10dp"
                 android:text="10ssssss"
                 android:textStyle="bold" />
@@ -44,7 +45,7 @@
             <TextView
                 android:id="@+id/tvDescription"
                 android:layout_width="wrap_content"
-                android:textSize="20dp"
+                android:textSize="10dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:text="description of the product"
@@ -53,7 +54,7 @@
                 android:padding="10dp"
                 android:maxLines="2"
                 android:singleLine="true"
-                android:background="#aa00ff" />
+                android:background="#8dfd8d00" />
 
         </RelativeLayout>
 

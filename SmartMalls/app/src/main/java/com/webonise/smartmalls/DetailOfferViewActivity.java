@@ -7,6 +7,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +21,7 @@ import java.util.Locale;
 /**
  * Created by webonise on 1/9/15.
  */
-public class DetailOfferViewActivity extends Activity implements View.OnClickListener {
+public class DetailOfferViewActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageView imageView;
     private TextView tvDescription;
     private TextView tvDiscount;
@@ -98,11 +99,13 @@ public class DetailOfferViewActivity extends Activity implements View.OnClickLis
             }
         }
 
-        String uri = String.format(Locale.ENGLISH, "http://maps.google.com/maps?saddr=%f,%f(%s)&daddr=%f,%f(%s)", (float) userLatitude, (float) userLongitude, "home", destinationLatitude, destinationLongitude ,"mall");
+        String uri = String.format(Locale.ENGLISH,
+         "http://maps.google.com/maps?saddr=%f,%f(%s)&daddr=%f,%f(%s)",
+                (float) userLatitude, (float) userLongitude, "Your Location", destinationLatitude, destinationLongitude ,"Mall");
         Log.d("long",""+destinationLongitude);
         Log.d("latitude",""+destinationLatitude);
-        Log.d("latitude",""+userLatitude);
-        Log.d("long",""+userLongitude);
+        Log.d("userlatitude",""+userLatitude);
+        Log.d("userlong",""+userLongitude);
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);

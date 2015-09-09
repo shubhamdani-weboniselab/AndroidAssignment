@@ -1,11 +1,8 @@
 package com.webonise.smartmalls;
 
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Message;
-import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
@@ -33,8 +30,8 @@ public class SplashMainActivity extends AppCompatActivity {
     private void showProcessDialog() {
         progressDialog = new ProgressDialog(SplashMainActivity.this);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progressDialog.setTitle(getString(R.string.Loading));
-        progressDialog.setMessage(getString(R.string.LoadingData));
+        progressDialog.setTitle(getString(R.string.loading));
+        progressDialog.setMessage(getString(R.string.loading_data));
         progressDialog.setCancelable(true);
         progressDialog.setIndeterminate(false);
         progressDialog.setMax(100);
@@ -55,9 +52,10 @@ public class SplashMainActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
-                Log.e("Volley Error", "");
-                Toast.makeText(getBaseContext(), "Please Check your Internet Connectivity", Toast.LENGTH_LONG).show();
+                Log.e(getString(R.string.volly_error), "");
+                Toast.makeText(getBaseContext(), getString(R.string.intenet_connectivity_error), Toast.LENGTH_LONG).show();
                 progressDialog.dismiss();
+                finish();
 //                Intent startMainScreen = new Intent(SplashMainActivity.this, AllOfferCardView.class).putExtra(Constants.SERVER_DATA, Constants.tempJsonResponse);
 //                startActivity(startMainScreen);
             }

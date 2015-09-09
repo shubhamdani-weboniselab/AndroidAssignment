@@ -6,13 +6,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.widget.Toast;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.Result;
 import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingRequest;
 import com.google.android.gms.location.LocationServices;
@@ -22,19 +24,20 @@ import com.google.gson.GsonBuilder;
 import java.util.ArrayList;
 import java.util.List;
 
+import utils.CoOdrinates;
+
 /**
  * Created by webonise on 1/9/15.
  */
-public class AllOfferCardView extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener,ResultCallback{
+public class AllOfferCardView extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener,ResultCallback<Status>{
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerView.Adapter adapter;
     private String jsonResponse;
     private GsonBuilder builder;
     private Gson gson;
-    private Geofence geofence;
     private List<Geofence> geofenceList;
-    PendingIntent geofencePendingIntent;
+    private PendingIntent geofencePendingIntent;
     private GoogleApiClient googleApiClient;
 
     /*Call Back Methods*/
@@ -44,7 +47,15 @@ public class AllOfferCardView extends AppCompatActivity implements GoogleApiClie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.all_offer_card_view);
         initializeViews();
+        buildGoogleApiClient();
         setAdapter();
+        setToolBar();
+    }
+
+    private void setToolBar() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(getTitle());
+        setSupportActionBar(toolbar);
     }
 
 
@@ -57,25 +68,31 @@ public class AllOfferCardView extends AppCompatActivity implements GoogleApiClie
         jsonResponse = getIntent().getExtras().getString("ServerData");
         builder = new GsonBuilder();
         gson = builder.create();
-        buildGoogleApiClient();
-//        googleApiClient = new GoogleApiClient.Builder(this)
-//                .addApi(LocationServices.API)
-//                .addConnectionCallbacks(this)
-//                .addOnConnectionFailedListener(this)
-//                .build();
-
-
-        /* initializing GeoFence */
-        GeofenceController.getInstance().init(this);
-
     }
+
     protected synchronized void buildGoogleApiClient() {
         googleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .addApi(LocationServices.API)
                 .build();
-        googleApiClient.connect();
+
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_splash_main, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.start_listening_beacon) {
+            Intent beaconIntent = new Intent(this,BeaconListenerActivity.class);
+            startActivity(beaconIntent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void setAdapter() {
@@ -95,18 +112,12 @@ public class AllOfferCardView extends AppCompatActivity implements GoogleApiClie
             coOrdinateArray[i] = jsonDataParser.getOffers().get(i).getCoOrdinates();
             geofenceList.add(new Geofence.Builder()
                             .setRequestId(jsonDataParser.getOffers().get(i).getName())
-                            .setCircularRegion(coOrdinateArray[i].getLatitude(), coOrdinateArray[i].getLongitude(), 10)
+                            .setCircularRegion(coOrdinateArray[i].getLatitude(), coOrdinateArray[i].getLongitude(), 20)
                             .setExpirationDuration(Geofence.NEVER_EXPIRE).setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_EXIT)
                             .build()
 
             );
-            if(googleApiClient.isConnected()){
-//            LocationServices.GeofencingApi.addGeofences(googleApiClient,getGeofencingRequest(),getGeofencePendingIntent()).setResultCallback(this);
-                Toast.makeText(this,"COnnected" ,Toast.LENGTH_LONG).show();
-            }
-            else {
-                Toast.makeText(this,"NOt COnnected",Toast.LENGTH_LONG).show();
-            }
+
         }
 
         adapter = new TempAdapter(DiscountArray, urlArray, DescriptionArray, coOrdinateArray, this);
@@ -131,6 +142,17 @@ public class AllOfferCardView extends AppCompatActivity implements GoogleApiClie
         return builder.build();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        googleApiClient.connect();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        googleApiClient.disconnect();
+    }
 
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
@@ -140,7 +162,7 @@ public class AllOfferCardView extends AppCompatActivity implements GoogleApiClie
 
     @Override
     public void onConnected(Bundle bundle) {
-    Log.d("","onConnected");
+    Log.d("","onConnected, Bundle :" +bundle);
         LocationServices.GeofencingApi.addGeofences(googleApiClient,getGeofencingRequest(),getGeofencePendingIntent()).setResultCallback(this);
     }
 
@@ -149,10 +171,10 @@ public class AllOfferCardView extends AppCompatActivity implements GoogleApiClie
         Log.d("","onConnectionSuspended");
 
     }
-
     @Override
-    public void onResult(Result result) {
-        Log.d("","onResult");
+    public void onResult(Status status) {
+
+        Log.d("OnReSult:" ,"" +status);
 
     }
 }

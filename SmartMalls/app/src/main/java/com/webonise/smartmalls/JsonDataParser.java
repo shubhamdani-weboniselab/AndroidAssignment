@@ -2,6 +2,8 @@ package com.webonise.smartmalls;
 
 import java.util.List;
 
+import utils.CoOdrinates;
+
 /**
  * Created by webonise on 28/8/15.
  */
